@@ -30,7 +30,7 @@ showdown.subParser('makeMarkdown.node', function (node, globals, spansOnly) {
     // BLOCKS
     //
     case 'h1':
-      if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 1) + '\n\n'; }
+      txt = showdown.subParser('makeMarkdown.strong')(node, globals);
       break;
     case 'h2':
       if (!spansOnly) { txt = showdown.subParser('makeMarkdown.header')(node, globals, 2) + '\n\n'; }
